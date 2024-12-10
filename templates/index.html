@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Processing App</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Image Processing</h1>
+
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" accept="image/*" required>
+        <button type="button" id="uploadButton">Upload</button>
+    </form>
+
+    <img id="uploadedImage" style="display: none;" />
+
+    <div id="controls" style="display: none;">
+        <label>Contrast: <input type="range" id="contrast" min="0.5" max="5" step="0.1" value="1"></label>
+        <label>Brightness: <input type="range" id="brightness" min="-100" max="100" step="1" value="0"></label>
+        <label>Blur: <input type="range" id="blur" min="0" max="10" step="1" value="0"></label>
+        <label>Edge Detection: <input type="checkbox" id="edgeDetection"></label>
+        <label>Resize: <input type="range" id="resize" min="0.5" max="2" step="0.1" value="1"></label>
+    </div>
+
+    <button id="showButton" style="display: none;">Show Processed Image</button>
+
+    <img id="processedImage" style="display: none;" />
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
